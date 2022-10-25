@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        内存中有两块空间
+        一块专门存字面量
+            存“哈哈”之前还会找有没有哈哈一样的字面量，有的话就不再重新创建了
+        一块是专门存变量
+            变量中存的时字面量的内存地址，和字面量建立起联系
+            变量中并不存储任何值
+
+        */
+        let a="哈哈"
+        //这里b的“哈哈”和a的“哈哈”存的是同一个内存地址
+        let b="哈哈"
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
