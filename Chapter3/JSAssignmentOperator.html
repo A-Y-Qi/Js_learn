@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赋值运算符</title>
+    <script>
+        /* 
+        赋值运算符用来将一个值赋值给一个变量
+            =
+                -将符号右边的值赋值给左侧变量
+            ??=
+                空赋值
+                只有当变量值为null或者undefined时才会对变量进行赋值
+            +=
+                a+=n 等价于 a = a + n
+            -=
+                a-=n 等价于 a = a - n
+            *=
+                a*=n 等价于 a = a * n
+            /=
+                a/=n 等价于 a = a / n
+            %=
+                a%=n 等价于 a = a % n
+            **=
+                a**=n 等价于 a = a ** n
+            
+        */
+       let a = 10
+       a = 5 //将右边的值   赋值    给左边的变量
+       let b=a  //一个变量只有在等号左边时才是一个变量，右边时他是值
+       a=b
+
+       a=66
+       a+11 //大部分运算符都不会改变变量的值
+       a=a+11   //但是赋值运算符除外
+       a+=5 //82
+
+       console.log(a)
+
+       let c
+       c??=10   //10
+       c??=5    //c=10
+       console.log(c)
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
