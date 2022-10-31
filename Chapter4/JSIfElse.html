@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-Else语句</title>
+    <script>
+        /* 
+            if-else 语句
+            -语法：
+                if(条件表达式){
+                    语句。。。
+                }
+                else{
+                    语句。。。
+                }
+            -执行流程：
+                if-else执行时，先对表达式进行求值判断，
+                    如果结果为true，则执行if后的语句
+                    如果结果为false，则执行else后的语句
+            if-else if-else语句
+                -语法：
+                    if(条件表达式){
+                        语句
+                    }
+                    else if (条件表达式){
+                        语句
+                    }
+                    else if (条件表达式){
+                        语句
+                    }
+                    else {
+                        语句
+                    }
+                -执行流程：
+                    if-else if-else语句，会自上向下依次对if后的条件表达式进行求值判断，
+                        如果条件表达式结果为true，则执行当前if后的语句，执行完毕语句结束
+                        如果条件表达式结果为false，则继续乡下判断，知道找到true为止
+                        如果所有的表达式都是false，则执行else后的语句
+                    注意：
+                        if-else if-else 语句中只有一个代码块被执行
+                            一旦有执行的代码块，下边的条件不会再继续判断了
+                            所以一定要注意，条件编写顺序
+
+
+        */
+
+        let age = 10
+        /* if (age>=60){
+            alert("你已经退休了！")
+        }
+        else{
+            alert("你还没有退休！")
+        } */
+        age=200
+
+        /* if (age>=100) {
+            alert("你真是一个长寿的人！")
+        }
+        else if (age>=80) {
+            alert("你比楼上那位年轻不少")
+            
+        }
+        else if (age>=60) {
+            alert("你已经退休了")
+        }
+        else if (age>=30) {
+            alert("你已经步入中年了")
+            
+        }
+        else if (age>=18) {
+            alert("你已经成年了")
+            
+        }
+        else{
+            alert("你还是个未成年啊")
+        } */
+
+        /* age=60  //你已经成年了 
+
+        
+        if (age>=18) {
+            alert("你已经成年了")
+            
+        }
+        else if (age>=30) {
+            alert("你已经步入中年了")
+            
+        }
+        else if (age>=60) {
+            alert("你已经退休了")
+        }
+        else{
+            alert("你还是个未成年啊")
+        } */
+
+        /* age=60  //你已经退休了
+
+        
+        if (age>=18 && age<30) {
+            alert("你已经成年了")
+            
+        }
+        else if (age>=30 && age<60) {
+            alert("你已经步入中年了")
+            
+        }
+        else if (age>=60) {
+            alert("你已经退休了")
+        }
+        else{
+            alert("你还是个未成年啊")
+        } */
+
+        //prompt() 可以用来获取用户输入的内容
+        //他会将用户输入的内容以字符串的形式返回，可以通过变量来接收
+        let num = +prompt("请输入一个人整数：")
+
+        alert(num)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
