@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For循环练习1</title>
+    <script>
+        /* 
+        练习1：求100以内3的倍数的总和
+        */
+
+        let result=0
+        let count=0
+        
+        //方法1
+        for (let index = 0; index <= 100; index++) {
+            if (index%3===0){
+                result+=index
+                count++
+            }
+        }
+
+        //方法2
+        result=0
+        count=0
+        for (let index = 3; index <= 100; index+=3) {
+            result+=index
+            count++
+        }
+
+        console.log(`3的倍数一共有${count}个，总和为${result}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For循环练习2</title>
+    <script>
+        /* 
+        练习2：求1000以内的水仙花数
+            -水仙花数
+                -一个n位数（n>=3），如果它各个位上数字的n次幂之和等于这个数，那么这个数就是水仙花数
+        */
+
+        //方法1
+
+        let h=0
+        let t=0
+        let o=0
+
+        for(let i=100;i<1000;i++){
+            h=parseInt(i/100)
+            t=parseInt((i-h*100)/10)
+            o=parseInt((i%10))
+            if (h**3+t**3+o**3===i) {
+                console.log(i)
+            }
+        }
+
+        //方法2: 使用字符串
+        h=0
+        t=0
+        o=0
+
+        for(let i=100;i<1000;i++){
+            temp=""+i //String(i)
+            h=temp[0]
+            t=temp[1]
+            o=temp[2]
+            if (h**3+t**3+o**3===i) {
+                console.log(i)
+            }
+        }
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

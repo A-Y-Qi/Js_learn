@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For循环</title>
+    <script>
+        /* 
+            for循环
+                -for循环和while没有本质区别，都是用来反复执行代码
+                -不通电是语法结构，for循环更加清晰
+                -语法：
+                    for(①初始化表达式;②条件表达式;④更新表达式){
+                        ③语句。。。
+                    }
+                -执行流程:
+                    ①执行初始化表达式，初始化变量
+                    ②执行条件表达式，判断循环是否执行（true执行，false终止）
+                    ③判断结果为true，则执行循环体
+                    ④执行更新表达式，对初始化变量进行修改
+                    ⑤重复②，直到判断为false为止
+                -初始化表达式，再循环的整个生命周期中只会执行一次
+                -for循环中的单个表达式都可以省略（但是都省略会成为一个死循环）
+                -使用let在for()循环中声明的变量是局部变量，只能在for循环内部访问
+                    使用var在for循环的()中声明的变量是可以在for循环的外部访问
+                -创建死循环的方式：
+                    while(1){}
+                    for(;;){}
+        */
+
+        // let i=0
+        // while (i<5) {
+        //     console.log(i)
+        //     i++
+            
+        // }
+
+        for (let i=0;i<5;i++){
+            console.log(i)
+        }
+        
+        //省略也是可以的，但是不是很清晰
+        let i=0
+        for (; i<5;) {
+            console.log(i)
+            i++
+            
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
