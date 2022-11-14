@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我爱你rbb-switch</title>
+    <style>
+        span{
+            display: inline-block;
+            width: 10px;
+            line-height:1em;
+        }
+    </style>
+    <script>
+        let ls=40
+        let le=50
+        let rs=70
+        let re=80
+
+        for (let y=0;y<=30;y++){
+            for (let x=0;x<=100;x++){
+                switch (true) {
+                    //rbb竖线
+                    case ((8<=y && 12>=y && x==48)||(8<=y && 12>=y && x==58)||(8<=y && 12>=y && x==68)):
+                        document.write("<span style='color:#8d9efe'>♥︎</span>")
+                        break
+                    //rbb横线
+                    case ((8==y && x<52 && x>=50)||((10==y || 12==y) && x<62 && x>=59)||((10==y || 12==y) && x<72 && x>=69)):
+                        document.write("<span style='color:#8d9efe'>♥︎</span>")
+                        break
+                    //rbb其他点
+                    case ((9==y && (x==49||x==52))||((11==y && (x==62||x==72)))):
+                        document.write("<span style='color:#8d9efe'>♥︎</span>")
+                        break
+                    //我爱你的爱心上半部分
+                    case ((15==y && (57<=x && x<=64))||((14==y && (x==58||x==59||x==63||x==62)))):
+                        document.write("<span style='color:#ff9298'>♥︎</span>")
+                        break
+                    //我爱你的爱心下半部分
+                    case ((16==y && (x>=58 && x<=63))||((17==y && (x>=59 && x<=62)))||((18==y && (x==60 || x==61)))):
+                        document.write("<span style='color:#ff9298'>♥︎</span>")
+                        break
+                    //我爱你的竖线
+                    case ((51==x && (y>14 && y<18))||((x==68 && (y>=14 && y<=17)))||((x==72 && (y>=14 && y<=17)))):
+                        document.write("<span style='color:#8d9efe'>♥︎</span>")
+                        break
+                    //我爱你的横线
+                    case ((14==y && (x>49 && x<53))||(y==18 && ((x>49 && x<53)||(68<x && 72>x)))):
+                        document.write("<span style='color:#8d9efe'>♥︎</span>")
+                        break
+                    //画爱心
+                    case(y==0 && ((rs-3<x && x<re+2)||(ls-3<x && x<le+2))):
+                        document.write("<span style='color:#ffc787'>♡</span>")
+                        break
+                    case (y<12 && ((rs<x && x<re)||(ls<x && x<le))):
+                        document.write("<span style='color:#7eca80'>*</span>")
+                        break
+                    case (y!=0 && y<12 && (rs==x+1 || x==re||ls==x+1 || x==le)):
+                        document.write("<span style='color:#ffc787'>♡</span>")
+                        break
+                    case (y==12 && (ls<x && re>x)):
+                        document.write("<span style='color:#7eca80'>*</span>")
+                        break
+                    case (y==12 && (x==re||ls==x+1)):
+                        document.write("<span style='color:#ffc787'>♡</span>")
+                        break
+                    case (y>12 && (ls<x && re>x)):
+                        document.write("<span style='color:#7eca80'>*</span>")
+                        break
+                    case (y>12 && re>=ls && (x==re||ls==x+1)):
+                        document.write("<span style='color:#ffc787'>♡</span>")
+                        break
+                    default:
+                        document.write("<span style='color:#7eca80'>&nbsp;</span>")
+                        break
+                    
+                }
+            }
+            // if(y==12 || y==13 ){
+            //     ls-=0
+            //     re+=0}
+            
+            if (y<12 && le<=rs && re<85){
+                ls-=3
+                if(ls<19){
+                    ls=19
+                }
+                le+=3
+                rs-=3
+                re+=3}
+            else if (y<12 && le<=rs && re>=85){
+                ls-=1
+                if(ls<19){
+                    ls=19
+                }
+                le+=1
+                rs-=1
+                re+=1}
+            
+            else if (y<10 && le>rs){
+                ls-=0
+                re+=0}
+            else if (y<15 && le>rs){
+                ls+=1
+                re-=1}
+            else{
+                ls+=2
+                re-=2}
+            document.write("<br>")  
+            
+        }
+                
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
