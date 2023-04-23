@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            定义一个可以求任意两个数和的函数
+        */
+       function sum(){
+        console.log( 1 + 1 )
+       }
+       sum()
+       /*
+       参数
+        -在定义函数时，可以在函数中指定数量不等的形式参数
+        -在函数中定义形参，就相当于在函数内部生猛了对应的变量但是却没有赋值
+        实际参数
+        -在调用函数时，可以再函数的（）传递数量不等的实际参数
+        -实际参数会赋值给其对应的形式参数
+
+        形式参数 vs 实际参数
+        - 形式参数 = 实际参数 的数量，则实际参数和形式参数会一一对应
+        - 实际参数 > 形式参数 的数量，则多余的实际参数不会被使用
+        - 实际参数 < 形式参数 的数量，则多余的形式参数为undefined
+
+        参数的类型：
+            - JS中不会检查参数类型，任何类型都可以作为参数传递
+
+        -在函数中定义参数，就相当于在函数内部声明了对应的变量但是还没有赋值
+            1. 函数声明
+                function 函数名([参数]){
+                    语句。。。
+                }
+            2. 函数表达式
+                const 变量 = function([参数]){
+                    语句。。。
+                }
+            3. 箭头函数
+                ([参数])=>{
+                    语句
+                }
+        
+       */
+       function sum2(a, b){
+        console.log( "a + b = ", a + b )
+       }
+       sum2(3)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
