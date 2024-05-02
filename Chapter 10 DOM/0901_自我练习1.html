@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .outer {
+                width: 640px;
+                margin: 50px auto;
+                text-align: center;
+            }
+        </style>
+        <script>
+
+
+            window.onload = function () {
+                /* 
+                    点击按钮切换图片
+                */
+
+                // 获取info
+                const info = document.getElementsByClassName("info")
+
+
+                //获取两个按钮
+                const prev = document.getElementsByClassName("prev")
+                const next = document.getElementsByClassName("next")
+
+                // 获取到图片
+                const img = document.getElementsByTagName("img")
+
+
+                // 创建一个数组来存储图片的路径
+                const imgArr = [
+                    "./images/1.png",
+                    "./images/2.png",
+                    "./images/3.png",
+                    "./images/4.png",
+                    "./images/5.png",
+                ]
+
+                // 创建一个变量数组来记录当前图片的索引
+                let current = new Array(info.length)
+                current.fill(0)
+                console.log(current)
+
+                //info.textContent = `总共 ${imgArr.length} 张图片，当前第 ${current + 1} 张`
+
+                
+
+                for (let image_order = 0; image_order < info.length; image_order++) {
+                    const curr_info = info[image_order]
+                    const curr_img = img[image_order]
+                    const curr_prev = prev[image_order]
+                    const curr_next = next[image_order]
+                    let curr_current = current[image_order]
+                    curr_info.textContent = `总共 ${imgArr.length} 张图片，当前第 ${curr_current + 1} 张`
+                    // 上一张
+                    curr_prev.onclick = function () {
+                    curr_current--
+
+                    //检查current的值是否合法
+                    if(curr_current < 0){
+                        // current = 0
+                        curr_current = imgArr.length - 1
+                    }
+
+                    curr_img.src = imgArr[curr_current]
+
+                    curr_info.textContent = `总共 ${imgArr.length} 张图片，当前第 ${curr_current + 1} 张`
+
+                }
+
+                // 点击next按钮后，切换图片
+                curr_next.onclick = function () {
+                    curr_current++
+
+                    if(curr_current > imgArr.length - 1){
+                        // current = imgArr.length - 1
+                        curr_current = 0
+                    }
+
+                    // 切换图片 --> 2.png 就是修改img的src属性
+                    curr_img.src = imgArr[curr_current]
+
+                    curr_info.textContent = `总共 ${imgArr.length} 张图片，当前第 ${curr_current + 1} 张`
+
+                }
+
+
+                    
+                }
+
+                
+
+                
+            }
+        </script>
+    </head>
+    <body>
+        <div class="outer">
+            <p class="info">
+                总共n张图片，当前第m张        
+            </p>
+            <div class="img-wrapper">
+                <img src="./images/1.png" alt="这是一个图片" />
+            </div>
+
+            <div class="btn-wrapper">
+                <button class="prev">上一张</button>
+                <button class="next">下一张</button>
+            </div>
+        </div>
+
+        <div class="outer">
+            <p class="info">
+                总共n张图片，当前第m张        
+            </p>
+            <div class="img-wrapper">
+                <img src="./images/1.png" alt="这是一个图片" />
+            </div>
+
+            <div class="btn-wrapper">
+                <button class="prev">上一张</button>
+                <button class="next">下一张</button>
+            </div>
+        </div>
+    </body>
+</html>
